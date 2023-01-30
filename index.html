@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+		<style type="text/css">
+			.reveal .slides {
+				height: 50%;
+			}
+			.reveal .slides .slide-caption { 
+				color:#040D62;
+				font-size: 75px;
+				font-weight: 600;
+			}
+
+			.reveal .slides .section1 div,
+			.reveal .slides .section3 div,
+			.reveal .slides .section4 div{ 
+				display: flex;
+				gap: 10px;
+			}
+
+			.reveal .slides .section1 ul,
+			.reveal .slides .section3 ul { 
+				width: 70%;
+			}
+
+			.reveal .slides .section1 div img { 
+				width: 30%;
+			}
+
+			.reveal .slides .section3 div img{ 
+				width: 40%;
+			}
+
+			.reveal .slides .section4 ul { 
+				width: 80%;
+			}
+
+			.reveal .slides .section4 div img{ 
+				width: 20%;
+				height: 30%;
+			}
+
+			/* .reveal .slides .section5 ul { 
+				width: 60%;
+			} */
+
+			/* .reveal .slides .section5 div img { 
+				width: 40%;
+			} */
+		 </style>
+		<!-- style="color:#040D62;" -->
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="section1" data-background="#fffa7f" style="color:#040D62;">
+					<h1 class="slide-caption">Introduction</h1>
+					<div>
+						<ul>
+							<li>Application functionality.</li>
+							<li>Code quality and optimization.</li>
+							<li>Security.</li>
+						</ul>
+						<img class="r-stretch" data-src="./assets/1.png">
+					</div>
+				</section>
+				<section class="section2" data-background="#fffa7f" style="color:#040D62;">
+					<img class="r-stretch" data-src="./assets/2.png">
+					<h1 class="slide-caption">Cross –Site Scripting</h1>
+					<p>A type of attack on web systems, which consists in injecting hacker code into the page displayed by the web system and interacting with the attacker's web server.</p>
+				</section>
+				<section class="section3" data-background="#fffa7f" style="color:#040D62;">
+					<h1 class="slide-caption">Types</h1>
+					<div>
+						<ul>
+							<li>Non-persistent.</li>
+							<li>Persistent.</li>
+							<li>DOM based XSS.</li>
+						</ul>
+						<img class="r-stretch" data-src="./assets/3.png">
+					</div>
+				</section>
+				<section class="section4" data-background="#fffa7f" style="color:#040D62;">
+					<h1 class="slide-caption">Threat Targets</h1>
+					<div>
+						<ul>
+							<li>Theft of cookies.</li>
+							<li>DoS attacks.</li>
+							<li>Attacks on the user's browser, data theft.</li>
+							<li>Performing any actions on the site under a user account.</li>
+						</ul>
+						<img class="r-stretch" data-src="./assets/4.png">
+					</div>
+				</section>
+				<section class="section5" data-background="#fffa7f" style="color:#040D62;">
+					<h1 class="slide-caption">How to prevent</h1>
+					<ul>
+						<li>Encoding of HTML control characters.</li>
+						<li>Secure validation of untrusted HTML input.</li>
+						<li>Cookie security.</li>
+						<li>Disable scripts.</li>
+						<li>Cookie option.</li>
+					</ul>
+					<img class="r-stretch" data-src="./assets/5.png">
+				</section>
+				<section class="section6" data-background-image="./assets/background.gif" style="color:#040D62;">
+					<h2 style="color:rgb(224, 224, 224);">By Kovalev Nikolay</h2>
+					<p style="color:rgb(224, 224, 224);">github: <a href="https://github.com/kovalevn89" target="_blank">kovalevn89</a></p>
+					<h3 style="color:rgb(224, 224, 224);">special for <a href="https://rs.school/" target="_blank">rolling scopes school </a></h3>
+					<p></p>
+					<p></p>
+					<p></p>
+					<a href="https://rs.school/" target="_blank"><img class="r-stretch" data-src="./assets/rs_logo.png" style="max-width:15%;"></a>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
